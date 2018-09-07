@@ -14,7 +14,7 @@ RUN npm run build --prod
 
 ### STAGE 2: Setup ###
 
-FROM nginx:alpinep
+FROM nginx:alpine
 
 ## From 'builder' stage copy over the artifacts in dist folder to default nginx public folder
 COPY --from=builder /app/dist/testApp /usr/share/nginx/html
